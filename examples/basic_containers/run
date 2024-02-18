@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+kerblam run make_count
+
+kerblam data clean --yes
