@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+kerblam run shell_count
+
+kerblam data clean --yes
+
+kerblam run make_count
+
+kerblam data clean --yes
+
