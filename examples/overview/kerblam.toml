@@ -1,0 +1,9 @@
+
+[data.remote]
+"https://raw.githubusercontent.com/MrHedmad/kerblam/main/README.md" = "readme.md"
+
+[data.profiles.smaller]
+"readme.md" = "small_readme.md"
+
+[execution]
+workdir = "/app"

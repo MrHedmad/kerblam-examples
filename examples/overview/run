@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -e 
+set -x
+
+tree .
+
+kerblam data fetch
+
+tree .
+
+kerblam run show_readme
+
+cat kerblam.toml
+
+kerblam run show_readme --profile smaller
+
+kerblam run show_readme --profile test
+
+kerblam run show_readme_docker
+
+kerblam run show_readme_docker --profile smaller
+
+kerblam data clean --yes
