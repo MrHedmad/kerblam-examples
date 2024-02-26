@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -e
+
+# This is to make data/out so that we have permissions to cleanup later
+# if we let docker make it for us, it's owned by root and we need to chown it
+# which does not work good in tests.
+mkdir -p ./data/out
+
+kerblam package make_count --tag my_docker_tag
+
+tree .
+
+kerblam replay make_count.kerblam.tar
+
+kerblam data clean --yes
+rm make_count.kerblam.tar
+
