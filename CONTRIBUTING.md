@@ -1,17 +1,26 @@
 # Contributing to the examples
 
+Thank you for wanting to contribute to Kerblam! All contributors are listed in 
+[the main kerblam repository](https://github.com/MrHedmad/kerblam/blob/main/CONTRIBUTING.md).
+
 ## Adding new examples
 If you want to add a new example, make a new folder under `examples/` with a
 representative name.
 Create all the files you need (eg. the basic folder structure, input files, etc...).
 
-If you need to create bulky input files that cannot be hosted in this repository
-but should not be managed by kerblam!, create a `example-setup` pipeline in
-`src/pipes` that sets up the example and a `example-teardown` that cleans it up.
-In general, however, it's best to not need such a complicated setup: examples
-should be self-contained and return to their original form (i.e. compatible with this
-repository) by just `kerblam data clean`.
+Kerblam! uses these examples as tests. It looks for a `run` shellfile in the root of
+the example directory with the commands to run the example, and it looks for any
+failure.
+It also checks that after the run the example has returned to its original state
+(e.g. no new files or delete files) after `run` completes.
 
+This means that you need to place all setup, execution and teardown code in `run.`
+
+Each new example is not automatically picked up as a test.
+Read the [kerblam CONTRIBUTING guide](https://github.com/MrHedmad/kerblam/blob/main/CONTRIBUTING.md)
+to learn more on how to do that.
+
+## Recording demos
 After you add an example, use [`asciinema`](https://asciinema.org) to record
 a small demo of the example.
 Be sure to open a small terminal (literally, resize the window to be smallish)
