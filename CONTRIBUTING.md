@@ -20,6 +20,14 @@ Each new example is not automatically picked up as a test.
 Read the [kerblam CONTRIBUTING guide](https://github.com/MrHedmad/kerblam/blob/main/CONTRIBUTING.md)
 to learn more on how to do that.
 
+> [!IMPORTANT]
+> Remember to include a `set -e` directive in the `run` scripts to allow for failing
+> tests to be picked up when kerblam runs its tests!
+> If you do not, only the last command in the `run` file will be evaluated for failure,
+> as since `kerblam data clean` usually works, it invalidates the whole test.
+> See https://github.com/MrHedmad/kerblam/issues/91 for more information on why
+> this notice was added here.
+
 ## Recording demos
 After you add an example, use [`asciinema`](https://asciinema.org) to record
 a small demo of the example.
