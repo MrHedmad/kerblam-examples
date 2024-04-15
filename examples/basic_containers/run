@@ -2,6 +2,6 @@
 
 set -e
 
-kerblam run make_count
+kerblam run make_count --skip-build-cache
 
 kerblam data clean --yes
