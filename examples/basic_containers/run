@@ -5,6 +5,6 @@ set -e
 # We must make it beforehand or we run into permission problems
 mkdir -p data/out
 
-kerblam run make_count --skip-build-cache
+kerblam run make_count --no-build-cache
 
 kerblam data clean --yes
