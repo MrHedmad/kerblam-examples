@@ -14,3 +14,5 @@ now be considered an expendable file for the purposes of `kerblam data clean`.
 
 </div>
 
+---
+Note: This is not a test since the same functionality can be found in the "Overview" example.
