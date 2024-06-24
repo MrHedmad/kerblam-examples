@@ -1,3 +1,5 @@
 [data.remote]
 "https://raw.githubusercontent.com/MrHedmad/kerblam/main/README.md" = "kerblam_readme.md"
 
+[code]
+pipes_dir = "./src/pipes"

@@ -2,3 +2,5 @@
 [data.profiles.other]
 "limerick.txt" = "other_limerick.txt"
 
+[code]
+pipes_dir = "./src/pipes"

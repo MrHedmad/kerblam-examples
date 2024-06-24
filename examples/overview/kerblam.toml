@@ -8,3 +8,5 @@
 [execution]
 workdir = "/app"
 
+[code]
+pipes_dir = "./src/pipes"
